@@ -1,55 +1,68 @@
-var play_note, get_random_note, choose_chord;
+var play_note, get_random_note, add_to_queue, choose_note_set;
 
-var C_chord_notes, current_chord, note_queue;
+var C_chord_notes, current_note_set, note_queue, piano_phase;
 
-C_chord_notes = [piano_c3, piano_d3, piano_e3, piano_g3, piano_a3, piano_c4, piano_d4, piano_e4,
+C_chord_note_set = [piano_c3, piano_d3, piano_e3, piano_g3, piano_a3, piano_c4, piano_d4, piano_e4,
   piano_g4, piano_a4, piano_b4, piano_c5];
+
+piano_phase = [piano_d3, piano_e3, piano_a3, piano_b3, piano_c4, piano_e3, piano_d3, piano_b3,
+  piano_a3, piano_e3, piano_c4, piano_b3]
 
 note_queue = []
 
+add_to_queue = function(key_pressed) {
+  note_queue.push(key_pressed);
+}
+
+play_from_queue = function() {
+  note_to_play = note_queue.shift();
+  if (note_to_play != undefined){
+    play_note(note_to_play);
+  };
+}
 
 play_note = function(key_pressed) {
   // alert(key_pressed);
   // _.sample(C_chord_notes)
   switch(key_pressed) {
-    case 113:
-      current_chord[0].play();
+    case 'q':
+      current_note_set[0].play();
       break;
-    case 119:
-      current_chord[1].play();
+    case 'w':
+      current_note_set[1].play();
       break;
-    case 101:
-      current_chord[2].play();
+    case 'e':
+      current_note_set[2].play();
       break;
-    case 114:
-      current_chord[3].play();
+    case 'r':
+      current_note_set[3].play();
       break;
-    case 116:
-      current_chord[4].play();
+    case 't':
+      current_note_set[4].play();
       break;
-    case 121:
-      current_chord[5].play();
+    case 'y':
+      current_note_set[5].play();
       break;
-    case 117:
-      current_chord[6].play();
+    case 'u':
+      current_note_set[6].play();
       break;
-    case 105:
-      current_chord[7].play();
+    case 'i':
+      current_note_set[7].play();
       break;
-    case 111:
-      current_chord[8].play();
+    case 'o':
+      current_note_set[8].play();
       break;
-    case 112:
-      current_chord[9].play();
+    case 'p':
+      current_note_set[9].play();
       break;
-    case 91:
-      current_chord[10].play();
+    case '[':
+      current_note_set[10].play();
       break;
-    case 93:
-      current_chord[11].play();
+    case ']':
+      current_note_set[11].play();
       break;
-    default:
-      get_random_note(current_chord).play();
+    case ' ':
+      get_random_note(current_note_set).play();
       // alert(key_pressed);
   }
 }
@@ -60,12 +73,10 @@ get_random_note = function(note_set) {
   return note_picked;
 }
 
-choose_chord = function(){
-  current_chord = C_chord_notes;
+choose_note_set = function(note_set){
+  current_note_set = note_set;
 };
 
 get_next_note = function(queue) {
 
 }
-
-choose_chord();

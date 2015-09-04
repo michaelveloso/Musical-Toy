@@ -3,7 +3,7 @@ var $doc;
 $doc = $(document);
 
 $doc.bind('keypress', function(e) {
-  play_note(e.which);
+  add_to_queue(String.fromCharCode(e.keyCode));
 });
 
-choose_chord();
+choose_note_set(C_chord_note_set);
