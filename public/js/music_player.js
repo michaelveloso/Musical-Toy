@@ -7,3 +7,6 @@ $doc.bind('keypress', function(e) {
 });
 
 choose_note_set(C_chord_note_set);
+timer.start(function() {
+  play_from_queue();
+}, ms_per_eighth)

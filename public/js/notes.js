@@ -76,7 +76,3 @@ get_random_note = function(note_set) {
 choose_note_set = function(note_set){
   current_note_set = note_set;
 };
-
-get_next_note = function(queue) {
-
-}
