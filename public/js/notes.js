@@ -10,61 +10,63 @@ piano_phase = [piano_d3, piano_e3, piano_a3, piano_b3, piano_c4, piano_e3, piano
 
 note_queue = []
 
+// add_to_queue = function(key_pressed) {
+//   note_queue.push(key_pressed);
+// }
+
 add_to_queue = function(key_pressed) {
-  note_queue.push(key_pressed);
-}
-
-play_from_queue = function() {
-  note_to_play = note_queue.shift();
-  if (note_to_play != undefined){
-    play_note(note_to_play);
-  };
-}
-
-play_note = function(key_pressed) {
-  // alert(key_pressed);
-  // _.sample(C_chord_notes)
   switch(key_pressed) {
     case 'q':
-      current_note_set[0].play();
+      note_queue.push(0);
       break;
     case 'w':
-      current_note_set[1].play();
+      note_queue.push(1);
       break;
     case 'e':
-      current_note_set[2].play();
+      note_queue.push(2);
       break;
     case 'r':
-      current_note_set[3].play();
+      note_queue.push(3);
       break;
     case 't':
-      current_note_set[4].play();
+      note_queue.push(4);
       break;
     case 'y':
-      current_note_set[5].play();
+      note_queue.push(5);
       break;
     case 'u':
-      current_note_set[6].play();
+      note_queue.push(6);
       break;
     case 'i':
-      current_note_set[7].play();
+      note_queue.push(7);
       break;
     case 'o':
-      current_note_set[8].play();
+      note_queue.push(8);
       break;
     case 'p':
-      current_note_set[9].play();
+      note_queue.push(9);
       break;
     case '[':
-      current_note_set[10].play();
+      note_queue.push(10);
       break;
     case ']':
-      current_note_set[11].play();
+      note_queue.push(10);
       break;
     case ' ':
-      get_random_note(current_note_set).play();
+      get_random_note(current_note_set).trigger();
+      break;
+    default:
+      random_index = Math.floor(Math.random() * current_note_set.length);
+      note_queue.push(random_index);
       // alert(key_pressed);
   }
+}
+
+note_queue.play_from_queue = function() {
+  scale_degree = note_queue.shift();
+  if (scale_degree != undefined){
+    current_note_set[scale_degree].trigger();
+  };
 }
 
 get_random_note = function(note_set) {

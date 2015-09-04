@@ -6,14 +6,8 @@ ms_per_half = ms_per_whole / 2.0
 ms_per_quarter = ms_per_whole / 4.0
 ms_per_eighth = ms_per_whole / 8.0
 ms_per_sixteenth = ms_per_whole / 16.0
-// var queue_index = 0;
 
-// var setTimeInterval = function(interval){
-//   setInterval(function(){
-//     play_from_queue()
-//   }, interval);
-// }
-
+//grabbed from Stack Overflow
 var timer = {
     running: false,
     iv: 5000,
