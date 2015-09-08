@@ -1,1 +1,13 @@
 <h1>Music Player</h1>
+
+<button type="button" class="button tiny round" id="whole_button">Whole note</button>
+<button type="button" class="button tiny round" id="half_button">Half note</button>
+<button type="button" class="button tiny round" id="quarter_button">Quarter note</button>
+<button type="button" class="button tiny round" id="eighth_button">Eighth note</button>
+<button type="button" class="button tiny round" id="sixteenth_button">Sixteenth note</button>
+
+<form method="post" id="tempo" class="column small-2" action="/tempo">
+  New Tempo (40-200):
+  <input type="text" id="new_tempo" name="new_tempo" min="40" max="200" require>
+  <input type="submit" value="Change Tempo">
+</form>
