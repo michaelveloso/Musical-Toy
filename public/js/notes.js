@@ -50,14 +50,14 @@ add_to_queue = function(key_pressed) {
       note_queue.push(10);
       break;
     case ']':
-      note_queue.push(10);
+      note_queue.push(11);
       break;
     case ' ':
       get_random_note(current_note_set).trigger();
       break;
     default:
-      random_index = Math.floor(Math.random() * current_note_set.length);
-      note_queue.push(random_index);
+      // random_index = Math.floor(Math.random() * current_note_set.length);
+      // note_queue.push(random_index);
       // alert(key_pressed);
   }
 }

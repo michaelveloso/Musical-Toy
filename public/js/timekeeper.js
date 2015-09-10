@@ -35,38 +35,38 @@ var timer = {
 };
 
 $(document).ready(function() {
-  tempo_form = $('#tempo')
-  tempo_input = $('#new_tempo')
-  tempo_form.submit(function(event){
-    event.preventDefault();
-    setTempo(tempo_input.val())
-  });
+  // tempo_form = $('#tempo')
+  // tempo_input = $('#new_tempo')
+  // tempo_form.submit(function(event){
+  //   event.preventDefault();
+  //   setTempo(tempo_input.val())
+  // });
 
   setTempo(150);
 
-  whole_button = $("#whole_button");
-  half_button = $("#half_button");
-  quarter_button = $("#quarter_button");
-  eighth_button = $("#eighth_button");
-  sixteenth_button = $("#sixteenth_button");
+  slow = $("#slow");
+  slower = $("#slower");
+  medium = $("#medium");
+  faster = $("#faster");
+  fast = $("#fast");
 
-  whole_button.on ('click', function(){
+  slow.on ('click', function(){
     timer.set_interval(ms_per_whole);
   });
 
-  half_button.on ('click', function(){
+  slower.on ('click', function(){
     timer.set_interval(ms_per_half);
   });
 
-  quarter_button.on ('click', function(){
+  medium.on ('click', function(){
     timer.set_interval(ms_per_quarter);
   });
 
-  eighth_button.on ('click', function(){
+  faster.on ('click', function(){
     timer.set_interval(ms_per_eighth);
   });
 
-  sixteenth_button.on ('click', function(){
+  fast.on ('click', function(){
     timer.set_interval(ms_per_sixteenth);
   });
 
