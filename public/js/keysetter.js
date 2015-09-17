@@ -4,7 +4,7 @@ var key_of_c = {
 };
 
 var key_of_f = {
-  note_set: c_chord_all_inst,
+  note_set: f_chord_all_inst,
   chord_queue: f_chord_queue
 };
 

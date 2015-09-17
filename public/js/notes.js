@@ -24,8 +24,20 @@ c_chord_cello = [cello_c2, cello_e2, cello_g2, cello_a2, cello_c3, cello_d3, cel
 
 extendArray(extendArray(c_chord_all_inst, c_chord_harp), c_chord_cello);
 
-piano_phase = [piano_d3, piano_e3, piano_a3, piano_b3, piano_c4, piano_e3, piano_d3, piano_b3,
-  piano_a3, piano_e3, piano_c4, piano_b3];
+//make f_note_set
+f_chord_all_inst = [piano_f2, piano_a2, piano_c3, piano_d3, piano_e3, piano_f3, piano_g3, piano_a3,
+  piano_b3, piano_c4, piano_d4, piano_e4, piano_f4];
+
+f_chord_piano = [piano_f2, piano_a2, piano_c3, piano_d3, piano_e3, piano_f3, piano_g3, piano_a3,
+  piano_b3, piano_c4, piano_d4, piano_e4, piano_g4];
+
+f_chord_harp = [harp_f2, harp_a2, harp_c3, harp_d3, harp_e3, harp_g3, harp_a3,
+    harp_b3, harp_c4, harp_e4, harp_g4];
+
+f_chord_cello = [cello_f1, cello_c2, cello_f2, cello_a2, cello_c3, cello_d3,
+  cello_e3, cello_f3, cello_g3, cello_b3];
+
+extendArray(extendArray(f_chord_all_inst, f_chord_harp), f_chord_cello);
 
 note_queue = [];
 
