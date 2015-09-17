@@ -9,4 +9,4 @@ $doc.bind('keypress', function(e) {
 });
 
 //set note set
-choose_note_set(C_chord_note_set);
+set_key(key_of_c);

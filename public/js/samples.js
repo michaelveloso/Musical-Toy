@@ -47,6 +47,24 @@ piano_b4_audiofile = new Audio('../audio_files/piano_samples/piano_b4.mp3');
 piano_c5_audiofile = new Audio('../audio_files/piano_samples/piano_c5.mp3');
 piano_d5_audiofile = new Audio('../audio_files/piano_samples/piano_d5.mp3');
 
+piano_f2 = construct_note(piano_f2_audiofile);
+piano_g2 = construct_note(piano_g2_audiofile);
+piano_a2 = construct_note(piano_a2_audiofile);
+piano_b2 = construct_note(piano_b2_audiofile);
+piano_c3 = construct_note(piano_c3_audiofile);
+piano_d3 = construct_note(piano_d3_audiofile);
+piano_e3 = construct_note(piano_e3_audiofile);
+piano_g3 = construct_note(piano_g3_audiofile);
+piano_a3 = construct_note(piano_a3_audiofile);
+piano_c4 = construct_note(piano_c4_audiofile);
+piano_d4 = construct_note(piano_d4_audiofile);
+piano_e4 = construct_note(piano_e4_audiofile);
+piano_g4 = construct_note(piano_g4_audiofile);
+piano_a4 = construct_note(piano_a4_audiofile);
+piano_b4 = construct_note(piano_b4_audiofile);
+piano_c5 = construct_note(piano_c5_audiofile);
+piano_d5 = construct_note(piano_d5_audiofile);
+
 var harp_f2_audiofile, harp_g2_audiofile, harp_a2_audiofile, harp_b2_audiofile, harp_c3_audiofile, harp_d3_audiofile, harp_e3_audiofile, harp_f3_audiofile, harp_g3_audiofile,
   harp_a3_audiofile, harp_b3_audiofile, harp_c4_audiofile, harp_d4_audiofile, harp_e4_audiofile, harp_f4_audiofile, harp_g4_audiofile, harp_a4_audiofile,
   harp_b4_audiofile, harp_c5_audiofile;
@@ -156,3 +174,6 @@ c_chord_1 = construct_chord(c_chord_1_audiofile);
 c_chord_2 = construct_chord(c_chord_2_audiofile);
 f_chord_1 = construct_chord(f_chord_1_audiofile);
 f_chord_2 = construct_chord(f_chord_2_audiofile);
+
+c_chord_queue = [c_chord_1, c_chord_2];
+f_chord_queue = [f_chord_1, f_chord_2];

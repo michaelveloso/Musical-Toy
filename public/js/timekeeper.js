@@ -7,7 +7,7 @@ var setTempo = function(bpm) {
 }
 
 //grabbed from Stack Overflow
-var timer = {
+var note_timer = {
     running: false,
     iv: 5000,
     timeout: false,
@@ -51,26 +51,26 @@ $(document).ready(function() {
   fast = $("#fast");
 
   slow.on ('click', function(){
-    timer.set_interval(ms_per_whole);
+    note_timer.set_interval(ms_per_whole);
   });
 
   slower.on ('click', function(){
-    timer.set_interval(ms_per_half);
+    note_timer.set_interval(ms_per_half);
   });
 
   medium.on ('click', function(){
-    timer.set_interval(ms_per_quarter);
+    note_timer.set_interval(ms_per_quarter);
   });
 
   faster.on ('click', function(){
-    timer.set_interval(ms_per_eighth);
+    note_timer.set_interval(ms_per_eighth);
   });
 
   fast.on ('click', function(){
-    timer.set_interval(ms_per_sixteenth);
+    note_timer.set_interval(ms_per_sixteenth);
   });
 
-  timer.start(function() {
+  note_timer.start(function() {
     note_queue.play_from_queue();
   }, ms_per_eighth)
 });
