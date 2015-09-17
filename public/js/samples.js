@@ -1,4 +1,5 @@
 var construct_note = function(audiofile) {
+  audiofile.volume = .7;
   note = {
     file: audiofile,
     trigger: function(){
@@ -9,6 +10,7 @@ var construct_note = function(audiofile) {
 }
 
 var construct_chord = function(audiofile) {
+  audiofile.volume = .5;
   chord = {
     file: audiofile,
     trigger: function(){
