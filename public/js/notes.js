@@ -2,8 +2,15 @@ var play_note, get_random_note, add_to_queue, choose_note_set;
 
 var C_chord_notes, current_note_set, note_queue, piano_phase;
 
-C_chord_note_set = [piano_c3, piano_d3, piano_e3, piano_g3, piano_a3, piano_c4, piano_d4, piano_e4,
-  piano_g4, piano_a4, piano_b4, piano_c5];
+// C_chord_note_set = [piano_c3, piano_d3, piano_e3, piano_g3, piano_a3, piano_c4, piano_d4, piano_e4,
+//   piano_g4, piano_a4, piano_b4, piano_c5];
+
+// C_chord_note_set = [harp_c3, harp_d3, harp_e3, harp_g3, harp_a3, harp_c4, harp_d4, harp_e4,
+//     harp_g4, harp_a4, harp_b4, harp_c5];
+
+C_chord_note_set = [cello_c2, cello_d2, cello_e2,
+  cello_g2, cello_a2, cello_c3, cello_d3, cello_e3, cello_g3, cello_a3, cello_b3, cello_c4]
+
 
 piano_phase = [piano_d3, piano_e3, piano_a3, piano_b3, piano_c4, piano_e3, piano_d3, piano_b3,
   piano_a3, piano_e3, piano_c4, piano_b3]
